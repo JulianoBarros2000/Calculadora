@@ -17,33 +17,35 @@
             crossorigin="anonymous">
         <title>Calculadora</title>
     </head>
-
+ 
     <body>
         <div class="container-sm p-2">
             <h1 class="protest-guerrilla-regular text-center text-muted">Calculadora</h1>
             <form id="form">
-                <div id="result" class="mb-3 p-3 bg-dark bg-gradient text-light fs-3">Resultado</div>
+                <div id="result" class="mb-3 p-3 bg-light bg-gradient text-muted fs-3"></div>
                 <div class="mb-3">
                     <label for="valor1"
                         class="form-label ">Primeiro</label>
-                    <input type="number" class="form-control" id="valor1">
+                    <input type="text"  class="form-control" id="valor1">
                 </div>
                 <div class="mb-3">
                     <label for="valor2" class="form-label">Segundo</label>
-                    <input type="number" class="form-control" id="valor2">
+                    <input type="text" class="form-control" id="valor2">
                 </div>
                 <div class="mb-3">
-                    <select class="form-select" aria-label="Default select example" id="opper">
-                        <option selected>Escolha a operação</option>
-                        <option value="soma">Adição</option>
-                        <option value="subst">Subtração</option>
+                    <select class="form-select" id="opper" onchange="selectOption()">
+                        <option value="comet" selected>Operação</option>
+                        <option value="soma" >Adição</option>
+                        <option value="subt" >Subtração</option>
                         <option value="mult">Multiplicação</option>
                         <option value="div">Divisão</option>
                       </select>
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Calcular</button>
+                    <button type="reset" class="btn btn-danger">Limpar</button>
+                    <button type="submit" class="btn btn-primary" id="cal">Calcular</button>
                 </div>
+                
             </form>
         </div>
 
